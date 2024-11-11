@@ -131,14 +131,14 @@ class DetailScreen extends StatelessWidget {
                   Divider(
                     color: Colors.deepPurple.shade100,
                   ),
-                  SizedBox(height: 16,),
-                  Row(
+                  const SizedBox(height: 16,),
+                  const Row(
                     children: [
                       Text("Deskripsi",style:TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),
                     ],
                   ),
-                  SizedBox(height: 16,),
-                  Text('${candi.description}',),
+                  const SizedBox(height: 16,),
+                  Text(candi.description,),
                   const SizedBox(
                     height: 16,
                   ),
@@ -174,7 +174,7 @@ class DetailScreen extends StatelessWidget {
                               child: Container(
                                 decoration: const BoxDecoration(),
                                 child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(10),
+                                  borderRadius: BorderRadius.circular(10),//clipRRect berguna untuk menumpulkan sudut kotak
                                   child: CachedNetworkImage(
                                     imageUrl: candi.imageUrls[index],
                                     width: 120,
