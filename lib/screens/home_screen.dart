@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_candi_rafael_eben_hart/data/candi_data.dart';
 import 'package:wisata_candi_rafael_eben_hart/widgets/item_card.dart';
+import 'detail_screens.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -10,7 +11,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,11 +20,15 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       // Todo 2.body gridview.builder
       body: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),padding: const EdgeInsets.all(8),itemCount: candiList.length,
-          itemBuilder:(context,index){
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2),
+          padding: const EdgeInsets.all(8),
+          itemCount: candiList.length,
+          itemBuilder: (context, index) {
             // Todo 3.itemcard
-            return ItemCard(candi: candiList[index],);
-    }),
+              return ItemCard(candi: candiList[index],
+              );
+          }),
     );
   }
 }

@@ -37,7 +37,9 @@ class DetailScreen extends StatelessWidget {
                       shape: BoxShape.circle,
                     ),
                     child: IconButton(
-                        onPressed: () {}, icon: const Icon(Icons.arrow_back)),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        }, icon: const Icon(Icons.arrow_back)),
                   ),
                 )
               ],
@@ -138,7 +140,7 @@ class DetailScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16,),
-                  Text(candi.description,),
+                  Text(candi.description,textAlign: TextAlign.justify,),
                   const SizedBox(
                     height: 16,
                   ),

@@ -80,6 +80,7 @@ class _MainScreenState extends State<MainScreen> {
                 _currentIndex=index;
               });
             },
+            //Todo: 4.data child theme
             items: [
               const BottomNavigationBarItem(
                   icon: Icon(
@@ -110,7 +111,7 @@ class _MainScreenState extends State<MainScreen> {
             unselectedItemColor: Colors.deepPurple[100],
             showSelectedLabels: true,
           )),
-      //Todo: 4.data child theme
     );
   }
 }
+

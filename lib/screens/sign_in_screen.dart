@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:wisata_candi_rafael_eben_hart/screens/sign_up_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   SignInScreen({super.key});
@@ -24,7 +25,7 @@ class _SignInScreenState extends State<SignInScreen> {
     return Scaffold(
       //todo 2.appbar
       appBar: AppBar(
-        title: Text("Sign In"),
+        title: const Text("Sign In"),
       ),
       //todo 3.body
       body: Center(
@@ -40,7 +41,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   //todo 5 textformfeild username
                   TextFormField(
                     controller: _usernameController,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: "Nama Pengguna",
                       border: OutlineInputBorder(),
                     ),
@@ -51,7 +52,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     decoration: InputDecoration(
                       errorText: _errorText.isNotEmpty ? _errorText : null,
                       labelText: "Kata Sandi",
-                      border: OutlineInputBorder(),
+                      border: const OutlineInputBorder(),
                       suffixIcon: IconButton(
                         onPressed: () {
                           setState(() {
@@ -66,24 +67,24 @@ class _SignInScreenState extends State<SignInScreen> {
                     obscureText: _obscurePassword,
                   ),
                   //todo 7 elavated button
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  ElevatedButton(onPressed: () {}, child: Text("Sign In")),
+                  ElevatedButton(onPressed: () { Navigator.pop(context,true);}, child: const Text("Sign In")),
                   //todo 8 TextButton sign Up
-                  SizedBox(height: 10,),
-                  TextButton(
-                      onPressed: () {},
-                      child: Text("Belum punya akun? Daftar di sini.")),
+                  const SizedBox(height: 20,),
                   RichText(text: TextSpan(text: "Belum Punya Akun?",
-                  style: TextStyle(fontSize: 16,color: Colors.deepPurple),
+                  style: const TextStyle(fontSize: 16,color: Colors.deepPurple),
                     children: <TextSpan>[
-                      TextSpan(text: "Daftar di sini.",style: TextStyle(color: Colors.blue,
+                      TextSpan(text: "Daftar di sini.",style: const TextStyle(color: Colors.blue,
                       decoration: TextDecoration.underline,
                       fontSize: 16
                       ),
                       recognizer: TapGestureRecognizer()
-                      ..onTap=(){}),
+                      ..onTap=(){Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignUpScreen()),
+                      );}),
                     ],
                   ),),
                 ],
