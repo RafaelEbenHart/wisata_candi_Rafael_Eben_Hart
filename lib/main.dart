@@ -38,6 +38,12 @@ class _MyAppState extends State<MyApp> {
         useMaterial3: true,
       ),
       home: const MainScreen(),
+      initialRoute: '/',
+      routes: {
+        '/homescreen': (context) => HomeScreen(),
+        '/signin' : (context) => SignInScreen(),
+        '/signup' : (context) => SignUpScreen(),
+      },
       //home: ProfileScreen(),
       //home: DetailScreen(candi: candiList[0]),
       //home: SignInScreen(),

@@ -161,4 +161,4 @@ var candiList = [
     ],
     isFavorite: false,
   ),
-];
+ ];
