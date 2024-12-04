@@ -162,7 +162,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     onPressed: () async {
                       bool signin = await Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SignInScreen()),
+                        MaterialPageRoute(builder: (context) => SignInscreen()),
                       );
                       if (signin) {
                         setState(() {
