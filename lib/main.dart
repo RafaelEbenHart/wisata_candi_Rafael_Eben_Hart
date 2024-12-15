@@ -5,8 +5,6 @@ import 'package:wisata_candi_rafael_eben_hart/screens/profile_screen.dart';
 import 'package:wisata_candi_rafael_eben_hart/screens/search_screen.dart';
 import 'package:wisata_candi_rafael_eben_hart/screens/sign_in_screen.dart';
 import 'package:wisata_candi_rafael_eben_hart/screens/sign_up_screen.dart';
-import 'screens/detail_screens.dart';
-import 'data/candi_data.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,8 +38,8 @@ class _MyAppState extends State<MyApp> {
       home: const MainScreen(),
       initialRoute: '/',
       routes: {
-        '/homescreen': (context) => HomeScreen(),
-        '/signin' : (context) => SignInScreen(),
+        '/homescreen': (context) => const HomeScreen(),
+        '/signin' : (context) => const SignInScreen(),
         '/signup' : (context) => SignUpScreen(),
       },
       //home: ProfileScreen(),
@@ -87,26 +85,26 @@ class _MainScreenState extends State<MainScreen> {
               });
             },
             //Todo: 4.data child theme
-            items: [
-              const BottomNavigationBarItem(
+            items: const [
+              BottomNavigationBarItem(
                   icon: Icon(
                     Icons.home,
                     color: Colors.deepPurple,
                   ),
                   label: "Home"),
-              const BottomNavigationBarItem(
+              BottomNavigationBarItem(
                   icon: Icon(
                     Icons.search,
                     color: Colors.deepPurple,
                   ),
                   label: "Search"),
-              const BottomNavigationBarItem(
+              BottomNavigationBarItem(
                   icon: Icon(
                     Icons.favorite,
                     color: Colors.deepPurple,
                   ),
                   label: "Favorite"),
-              const BottomNavigationBarItem(
+              BottomNavigationBarItem(
                   icon: Icon(
                     Icons.person,
                     color: Colors.deepPurple,
